@@ -8,19 +8,22 @@
 
 /* Begin PBXBuildFile section */
 		7103422ACCEF1DB85E3B4207 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F4B302AA9C9E9BDC5E299CF3 /* libPods.a */; };
+		AE3004FD1CBC82EB001ADDDC /* BookShop.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE3004FA1CBC82EB001ADDDC /* BookShop.storyboard */; };
+		AE3004FE1CBC82EB001ADDDC /* BookShopTableController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE3004FB1CBC82EB001ADDDC /* BookShopTableController.swift */; };
+		AE3004FF1CBC82EB001ADDDC /* BookShopViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE3004FC1CBC82EB001ADDDC /* BookShopViewModel.swift */; };
+		AE3005011CBC88EB001ADDDC /* BookShopCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE3005001CBC88EB001ADDDC /* BookShopCell.swift */; };
 		AE300F161CBBACDB00F47EE9 /* BookShopModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE300F151CBBACDB00F47EE9 /* BookShopModel.swift */; };
 		AE300F191CBBAD4600F47EE9 /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE300F181CBBAD4600F47EE9 /* BaseViewModel.swift */; };
 		AE300F1D1CBBAD9100F47EE9 /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE300F1C1CBBAD9100F47EE9 /* NavigationController.swift */; };
 		AE300F1F1CBBADAB00F47EE9 /* TabbarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE300F1E1CBBADAB00F47EE9 /* TabbarController.swift */; };
-		AE300F211CBBADE400F47EE9 /* BookShopViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE300F201CBBADE400F47EE9 /* BookShopViewModel.swift */; };
-		AE300F231CBBAE3600F47EE9 /* BookShopTableController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE300F221CBBAE3600F47EE9 /* BookShopTableController.swift */; };
-		AE300F251CBBAE9300F47EE9 /* BookShop.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE300F241CBBAE9300F47EE9 /* BookShop.storyboard */; };
 		AE300F2D1CBBB0FB00F47EE9 /* qidong0.png in Resources */ = {isa = PBXBuildFile; fileRef = AE300F271CBBB0FB00F47EE9 /* qidong0.png */; };
 		AE300F2E1CBBB0FB00F47EE9 /* qidong1.png in Resources */ = {isa = PBXBuildFile; fileRef = AE300F281CBBB0FB00F47EE9 /* qidong1.png */; };
 		AE300F2F1CBBB0FB00F47EE9 /* qidong2.png in Resources */ = {isa = PBXBuildFile; fileRef = AE300F291CBBB0FB00F47EE9 /* qidong2.png */; };
 		AE300F301CBBB0FB00F47EE9 /* icon40.png in Resources */ = {isa = PBXBuildFile; fileRef = AE300F2A1CBBB0FB00F47EE9 /* icon40.png */; };
 		AE300F311CBBB0FB00F47EE9 /* picture1.png in Resources */ = {isa = PBXBuildFile; fileRef = AE300F2B1CBBB0FB00F47EE9 /* picture1.png */; };
 		AE300F321CBBB0FB00F47EE9 /* twitterIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = AE300F2C1CBBB0FB00F47EE9 /* twitterIcon.png */; };
+		AE9EC18F1CBC9B290037BF5E /* BookShopCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE9EC18E1CBC9B290037BF5E /* BookShopCollectionCell.swift */; };
+		AE9EC1A21CBCE6250037BF5E /* Define.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE9EC1A11CBCE6250037BF5E /* Define.swift */; };
 		AEF5A97A1CBB507500738242 /* BookSwiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEF5A9791CBB507500738242 /* BookSwiftTests.swift */; };
 		AEF5A9851CBB507500738242 /* BookSwiftUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEF5A9841CBB507500738242 /* BookSwiftUITests.swift */; };
 		AEF5A9CF1CBB536300738242 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEF5A9C21CBB535900738242 /* Alamofire.framework */; };
@@ -122,13 +125,14 @@
 
 /* Begin PBXFileReference section */
 		9CDA58A14AC4B7C88703C771 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		AE3004FA1CBC82EB001ADDDC /* BookShop.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = BookShop.storyboard; sourceTree = "<group>"; };
+		AE3004FB1CBC82EB001ADDDC /* BookShopTableController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookShopTableController.swift; sourceTree = "<group>"; };
+		AE3004FC1CBC82EB001ADDDC /* BookShopViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookShopViewModel.swift; sourceTree = "<group>"; };
+		AE3005001CBC88EB001ADDDC /* BookShopCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookShopCell.swift; sourceTree = "<group>"; };
 		AE300F151CBBACDB00F47EE9 /* BookShopModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookShopModel.swift; sourceTree = "<group>"; };
 		AE300F181CBBAD4600F47EE9 /* BaseViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
 		AE300F1C1CBBAD9100F47EE9 /* NavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
 		AE300F1E1CBBADAB00F47EE9 /* TabbarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabbarController.swift; sourceTree = "<group>"; };
-		AE300F201CBBADE400F47EE9 /* BookShopViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookShopViewModel.swift; sourceTree = "<group>"; };
-		AE300F221CBBAE3600F47EE9 /* BookShopTableController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookShopTableController.swift; sourceTree = "<group>"; };
-		AE300F241CBBAE9300F47EE9 /* BookShop.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = BookShop.storyboard; sourceTree = "<group>"; };
 		AE300F271CBBB0FB00F47EE9 /* qidong0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = qidong0.png; sourceTree = "<group>"; };
 		AE300F281CBBB0FB00F47EE9 /* qidong1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = qidong1.png; sourceTree = "<group>"; };
 		AE300F291CBBB0FB00F47EE9 /* qidong2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = qidong2.png; sourceTree = "<group>"; };
@@ -136,6 +140,8 @@
 		AE300F2B1CBBB0FB00F47EE9 /* picture1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = picture1.png; sourceTree = "<group>"; };
 		AE300F2C1CBBB0FB00F47EE9 /* twitterIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = twitterIcon.png; sourceTree = "<group>"; };
 		AE416B561CBBA44A009CB90D /* Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
+		AE9EC18E1CBC9B290037BF5E /* BookShopCollectionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookShopCollectionCell.swift; sourceTree = "<group>"; };
+		AE9EC1A11CBCE6250037BF5E /* Define.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Define.swift; sourceTree = "<group>"; };
 		AEF5A9611CBB507500738242 /* BookSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BookSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AEF5A9751CBB507500738242 /* BookSwiftTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BookSwiftTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AEF5A9791CBB507500738242 /* BookSwiftTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookSwiftTests.swift; sourceTree = "<group>"; };
@@ -184,9 +190,11 @@
 		AE300F111CBBACAB00F47EE9 /* 书城 */ = {
 			isa = PBXGroup;
 			children = (
-				AE300F201CBBADE400F47EE9 /* BookShopViewModel.swift */,
-				AE300F221CBBAE3600F47EE9 /* BookShopTableController.swift */,
-				AE300F241CBBAE9300F47EE9 /* BookShop.storyboard */,
+				AE3004FA1CBC82EB001ADDDC /* BookShop.storyboard */,
+				AE3004FB1CBC82EB001ADDDC /* BookShopTableController.swift */,
+				AE3004FC1CBC82EB001ADDDC /* BookShopViewModel.swift */,
+				AE3005001CBC88EB001ADDDC /* BookShopCell.swift */,
+				AE9EC18E1CBC9B290037BF5E /* BookShopCollectionCell.swift */,
 			);
 			path = "书城";
 			sourceTree = "<group>";
@@ -219,6 +227,13 @@
 			path = "启动图片";
 			sourceTree = "<group>";
 		};
+		AE9EC1981CBCD9B00037BF5E /* 第三方 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "第三方";
+			sourceTree = "<group>";
+		};
 		AEF5A9581CBB507500738242 = {
 			isa = PBXGroup;
 			children = (
@@ -245,6 +260,7 @@
 		AEF5A9631CBB507500738242 /* BookSwift */ = {
 			isa = PBXGroup;
 			children = (
+				AE9EC1981CBCD9B00037BF5E /* 第三方 */,
 				AE300F171CBBAD2D00F47EE9 /* 根控制器 */,
 				AE300F141CBBACDB00F47EE9 /* 模型 */,
 				AEF5A9D31CBB543100738242 /* 工具 */,
@@ -290,6 +306,7 @@
 		AEF5A9D31CBB543100738242 /* 工具 */ = {
 			isa = PBXGroup;
 			children = (
+				AE9EC1A11CBCE6250037BF5E /* Define.swift */,
 			);
 			path = "工具";
 			sourceTree = "<group>";
@@ -510,7 +527,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AE300F251CBBAE9300F47EE9 /* BookShop.storyboard in Resources */,
 				AEF5A9EB1CBB5DA000738242 /* Info.plist in Resources */,
 				AE300F2F1CBBB0FB00F47EE9 /* qidong2.png in Resources */,
 				AEF5A9E41CBB543100738242 /* Assets.xcassets in Resources */,
@@ -521,6 +537,7 @@
 				AE300F2E1CBBB0FB00F47EE9 /* qidong1.png in Resources */,
 				AE300F321CBBB0FB00F47EE9 /* twitterIcon.png in Resources */,
 				AEF5A9E51CBB543100738242 /* LaunchScreen.storyboard in Resources */,
+				AE3004FD1CBC82EB001ADDDC /* BookShop.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -579,13 +596,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				AE300F1D1CBBAD9100F47EE9 /* NavigationController.swift in Sources */,
-				AE300F231CBBAE3600F47EE9 /* BookShopTableController.swift in Sources */,
 				AE300F161CBBACDB00F47EE9 /* BookShopModel.swift in Sources */,
-				AE300F211CBBADE400F47EE9 /* BookShopViewModel.swift in Sources */,
 				AE300F191CBBAD4600F47EE9 /* BaseViewModel.swift in Sources */,
+				AE3004FF1CBC82EB001ADDDC /* BookShopViewModel.swift in Sources */,
+				AE9EC1A21CBCE6250037BF5E /* Define.swift in Sources */,
+				AE3005011CBC88EB001ADDDC /* BookShopCell.swift in Sources */,
 				AEF5A9E31CBB543100738242 /* AppDelegate.swift in Sources */,
 				AEF5A9E91CBB548600738242 /* NetManager.swift in Sources */,
 				AE300F1F1CBBADAB00F47EE9 /* TabbarController.swift in Sources */,
+				AE9EC18F1CBC9B290037BF5E /* BookShopCollectionCell.swift in Sources */,
+				AE3004FE1CBC82EB001ADDDC /* BookShopTableController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -731,6 +751,7 @@
 			baseConfigurationReference = 9CDA58A14AC4B7C88703C771 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = BookSwift/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
@@ -746,6 +767,7 @@
 			baseConfigurationReference = EFCE31272F61BC8DFBC5AD0D /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = BookSwift/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;

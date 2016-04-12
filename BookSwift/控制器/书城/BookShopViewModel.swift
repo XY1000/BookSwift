@@ -23,12 +23,12 @@ class BookShopViewModel: BaseViewModel {
     
     var newSpecialColumn: [NewspecialModel]?
     */
-    private var headerArr: [NewspecialModel]?
-    private var bottomArr: [TailoredbookModel]?
-    private var aloneArr: [AlonebookModel]?
-    private var hotArr: [HotbookModel]?
-    private var xinArr: [NewgoodbookModel]?
-    private var liangArr: [AgospecialModel]?
+    private var headerArr: [NSDictionary]?
+    private var bottomArr: [NSDictionary]?
+    private var aloneArr: [NSDictionary]?
+    private var hotArr: [NSDictionary]?
+    private var xinArr: [NSDictionary]?
+    private var liangArr: [NSDictionary]?
     
     func getDataByNetComplete(success:(isSuccess:Bool)->Void,fail:(error:NSError)->Void)->Void {
         
@@ -37,7 +37,15 @@ class BookShopViewModel: BaseViewModel {
          
             
             
+            self.headerArr = Successback.newSpecialColumn
+            self.bottomArr = Successback.agoSpecialColumn
+            self.aloneArr = Successback.hotBook
+            self.hotArr = Successback.aloneBook
+            self.xinArr = Successback.newGoodBook
+            self.liangArr = Successback.tailoredBook
             
+            success(isSuccess: true)
+           
             
             }) { (error) -> Void in
                 
@@ -49,27 +57,160 @@ class BookShopViewModel: BaseViewModel {
         
     }
     
+    
 //MARK: 头部数据
-    var headerNum : NSInteger {
+    
+    private func getHeaderModel(row:Int)->NewspecialModel {
+        
+        let model = NewspecialModel()
+        
+        model.mj_setKeyValues(self.headerArr![row])
+        
+        
+        return model
+        
+        
+    }
+    
+    var headerNum : Int {
         
         get {
+
+            if self.headerArr == nil {
+                
+                return 0
+            }
             
-          return (headerArr?.count)!
+          return (self.headerArr?.count)!
             
         }
         
         
     }
+    func headerImageUrl(row:Int)->NSURL {
+        
+        
+        return NSURL(string: self.getHeaderModel(row).bookspecialcolumnthumbnailurl!)!
+        
+    }
+    
+    func headerViewID(row:Int)->Int {
+        
+        return self.getHeaderModel(row).bookspecialcolumnid
+    }
     
 //MARK: 量身打造
+    var liangNum : Int {
+        
+        get {
+        
+            if self.liangArr == nil {
+                
+                return 0
+            }
+            
+            return (self.liangArr?.count)!
+        }
+    }
 
-
+    private func getTailModel(row:Int)->TailoredbookModel {
+        
+        let model:TailoredbookModel = TailoredbookModel()
+    
+        model.mj_setKeyValues(self.liangArr![row])
+    
+        return model
+    
+    }
+    
+    func bookIconForLiang(row:Int)->NSURL {
+        
+        
+        return NSURL(string: self.getTailModel(row).bookimageurl!)!
+    }
+    
+    func bookNameForLiang(row:Int)->String {
+        
+        return self.getTailModel(row).bookname!
+    }
+    
+    func bookWriterForLiang(row:Int)->String {
+        
+        return self.getTailModel(row).bookauthor!
+    }
+    
 //MARK: 新书推荐
+    
+    var xinNum : Int {
+        
+        get {
+            
+            if self.xinArr == nil {
+                
+                return 0
+            }
+            
+            return (self.xinArr?.count)!
+        }
+    }
+    
+    private func getNewGoodModel(row:Int)->NewgoodbookModel {
+        
+        let model = NewgoodbookModel()
+        
+        model.mj_setKeyValues(self.xinArr![row])
+        
+        return model
+        
+    }
+    
+    
     
 //MARK: 热门欣赏
 
+    var hotNum : Int {
+        
+        get {
+            
+            if self.hotArr == nil {
+                
+                return 0
+            }
+            
+            return (self.hotArr?.count)!
+        }
+    }
+    
 //MARK: 独家首发
     
+    var aloneNum : Int {
+        
+        get {
+            
+            if self.aloneArr == nil {
+                
+                return 0
+            }
+            
+            return (self.aloneArr?.count)!
+        }
+    }
     
 //MARK: 底部视图
+    
+    
+    
+    
+    var bottomNum : Int {
+        
+        get {
+            
+            if self.bottomArr == nil {
+                
+                return 0
+            }
+            
+            return (self.bottomArr?.count)!
+        }
+    }
 }

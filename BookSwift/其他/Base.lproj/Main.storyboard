@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="I8V-qw-31v">
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
     </dependencies>
     <scenes>
@@ -17,10 +16,7 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
-                        <segue destination="Hut-O9-JJ0" kind="relationship" relationship="viewControllers" id="msI-0C-KUL"/>
                         <segue destination="t5m-hF-yD8" kind="relationship" relationship="viewControllers" id="vXW-dr-iXm"/>
-                        <segue destination="xZN-Y0-SNA" kind="relationship" relationship="viewControllers" id="nnZ-CZ-VDp"/>
-                        <segue destination="6LB-D0-qVw" kind="relationship" relationship="viewControllers" id="xvM-9j-AA8"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="b3d-07-Mz4" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -43,7 +39,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OUs-i4-FCo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="320.5" y="-10.5"/>
+            <point key="canvasLocation" x="402.5" y="-39.5"/>
         </scene>
         <!--BookShop-->
         <scene sceneID="Z04-qV-ekG">
@@ -53,7 +49,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XgI-z1-6Yg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="659" y="-55"/>
+            <point key="canvasLocation" x="812.5" y="-53"/>
         </scene>
         <!--书评-->
         <scene sceneID="ec2-48-ssE">
@@ -93,13 +89,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
-                    <connections>
-                        <segue destination="fU0-zH-lbH" kind="relationship" relationship="rootViewController" id="VQQ-Ty-VYS"/>
-                    </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SeK-Qd-quh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="732.5" y="719.5"/>
+            <point key="canvasLocation" x="835.5" y="719.5"/>
         </scene>
         <!--Storyboard Reference-->
         <scene sceneID="XzE-UJ-8Nr">

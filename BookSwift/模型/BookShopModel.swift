@@ -12,26 +12,26 @@ import Foundation
 class BookShopModel: NSObject {
 
     
-    var agoSpecialColumn: [AgospecialModel]?
+    var agoSpecialColumn: [NSDictionary]?
 
-    var tailoredBook: [TailoredbookModel]?
+    var tailoredBook: [NSDictionary]?
 
-    var hotBook: [HotbookModel]?
+    var hotBook: [NSDictionary]?
 
-    var newGoodBook: [NewgoodbookModel]?
+    var newGoodBook: [NSDictionary]?
 
-    var aloneBook: [AlonebookModel]?
+    var aloneBook: [NSDictionary]?
 
-    var newSpecialColumn: [NewspecialModel]?
+    var newSpecialColumn: [NSDictionary]?
     
-     func mj_objectClassInArray() -> [NSObject : AnyObject]! {
-        
-        return ["agoSpecialColumn":AgospecialModel(),"tailoredBook":TailoredbookModel(),
-                "hotBook":HotbookModel(),"newGoodBook":NewgoodbookModel(),
-                "aloneBook":AlonebookModel(),"newSpecialColumn":NewspecialModel()
-        ]
-        
-    }
+//     func mj_objectClassInArray() -> [NSObject : AnyObject]! {
+//        
+//        return ["agoSpecialColumn":AgospecialModel(),"tailoredBook":TailoredbookModel(),
+//                "hotBook":HotbookModel(),"newGoodBook":NewgoodbookModel(),
+//                "aloneBook":AlonebookModel(),"newSpecialColumn":NewspecialModel()
+//        ]
+//        
+//    }
     
 }
 class AlonebookModel: NSObject {
