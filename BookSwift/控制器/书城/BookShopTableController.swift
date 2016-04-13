@@ -18,6 +18,8 @@ class BookShopTableController: UITableViewController {
         
         return BookShopViewModel()
         
+        
+        
     }()
     
     private var timer:NSTimer?
