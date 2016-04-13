@@ -10,6 +10,9 @@
 
 class BookShopTableController: UITableViewController {
 
+    
+    
+    
     @IBOutlet weak var headerView: UIScrollView!
     lazy var bookshopVM : BookShopViewModel = {
         
@@ -25,6 +28,8 @@ class BookShopTableController: UITableViewController {
         super.viewDidLoad()
         
         self.requestDataByNet()
+        
+        self.tableView.tableFooterView?.bounds = CGRectMake(0, 0,(self.tableView.tableFooterView?.bounds.size.width)!, 250)
         
     }
    private func requestDataByNet() -> Void {
@@ -104,7 +109,7 @@ class BookShopTableController: UITableViewController {
         
     }
     
-   private func headerViewDidSelected(sender:UIButton)->Void {
+    func headerViewDidSelected(sender:UIButton)->Void {
         
         print("图片的id \(sender.tag - 1000)")
         
@@ -154,17 +159,38 @@ class BookShopTableController: UITableViewController {
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
-        let cell  = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath)
+        var cell:UITableViewCell
         
+        if indexPath.section == 4 {
+            
+             cell  = tableView.dequeueReusableCellWithIdentifier("BottomCell", forIndexPath: indexPath)
+
+        }else {
+            
+         cell  = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath)
+            
+        }
         return cell
     }
     
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         
-        return 4;
+        return self.bookshopVM.isLoading ? 0 : 5
     }
     
     override func tableView(tableView: UITableView, willDisplayCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
+        
+        //最后一个
+        if indexPath.section == 4 {
+            
+            let bottomCell: BottomCell = cell as! BottomCell
+            
+            bottomCell.viewModel = self.bookshopVM
+            bottomCell.collectionView.reloadData()
+            
+            return
+        }
+        
         
         let myCell:BookShopCell = cell as! BookShopCell
         
@@ -189,13 +215,23 @@ class BookShopTableController: UITableViewController {
             myCell.titleLb.text = "独家首发"
              myCell.cellStyle = styleForCell.duStyle
 
-        default: break
+        default:
+            
+            return
             
             }
         
         myCell.bookShopVM = self.bookshopVM
         myCell.collectionView.reloadData()
     }
+    
+    override func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        
+        return 20
+    }
+    
+    
+    
     
     
 }

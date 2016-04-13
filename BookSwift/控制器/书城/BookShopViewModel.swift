@@ -10,19 +10,6 @@
 
 class BookShopViewModel: BaseViewModel {
 
-    /*
-    \var agoSpecialColumn: [AgospecialModel]?
-    
-    var tailoredBook: [TailoredbookModel]?
-    
-    var hotBook: [HotbookModel]?
-    
-    var newGoodBook: [NewgoodbookModel]?
-    
-    var aloneBook: [AlonebookModel]?
-    
-    var newSpecialColumn: [NewspecialModel]?
-    */
     private var headerArr: [NSDictionary]?
     private var bottomArr: [NSDictionary]?
     private var aloneArr: [NSDictionary]?
@@ -30,17 +17,20 @@ class BookShopViewModel: BaseViewModel {
     private var xinArr: [NSDictionary]?
     private var liangArr: [NSDictionary]?
     
+    //是否正在进行网络请求
+    var isLoading : Bool = true
+    
     func getDataByNetComplete(success:(isSuccess:Bool)->Void,fail:(error:NSError)->Void)->Void {
         
         
         NetManager.sharedManager().getBookShopData({ (Successback) -> Void in
          
             
-            
+            self.isLoading = false
             self.headerArr = Successback.newSpecialColumn
             self.bottomArr = Successback.agoSpecialColumn
-            self.aloneArr = Successback.hotBook
-            self.hotArr = Successback.aloneBook
+            self.hotArr = Successback.hotBook
+            self.aloneArr = Successback.aloneBook
             self.xinArr = Successback.newGoodBook
             self.liangArr = Successback.tailoredBook
             
@@ -164,7 +154,24 @@ class BookShopViewModel: BaseViewModel {
         
     }
     
+    func bookIconForXin(row:Int) ->NSURL {
+        
+        
+        return NSURL(string: self.getNewGoodModel(row).bookimageurl!)!
+        
+    }
     
+    func bookNameForXin(row:Int) ->String {
+        
+        
+        return self.getNewGoodModel(row).bookname!
+        
+    }
+    
+    func bookWriterForXin(row:Int) ->String {
+        
+        return self.getNewGoodModel(row).bookauthor!
+    }
     
 //MARK: 热门欣赏
 
@@ -179,6 +186,35 @@ class BookShopViewModel: BaseViewModel {
             
             return (self.hotArr?.count)!
         }
+    }
+    
+    
+    private func getHotModelForHot(row:Int) ->HotbookModel {
+        
+        let model = HotbookModel()
+        
+        model.mj_setKeyValues(self.hotArr![row])
+        
+        return model
+    }
+    
+    
+    func bookIconForHot(row:Int) ->NSURL {
+        
+        
+        return NSURL(string: self.getHotModelForHot(row).bookimageurl!)!
+        
+    }
+    
+    func bookNameForHot(row:Int) ->String {
+        
+        
+        return self.getHotModelForHot(row).bookname!
+    }
+    
+    func bookWriterForHot(row:Int) ->String {
+        
+        return self.getHotModelForHot(row).bookauthor!
     }
     
 //MARK: 独家首发
@@ -196,10 +232,36 @@ class BookShopViewModel: BaseViewModel {
         }
     }
     
+    
+    private func getAloneModel(row:Int) ->AlonebookModel {
+        
+        
+        let model = AlonebookModel()
+        
+        
+        model.mj_setKeyValues(self.aloneArr![row])
+        
+        return model
+        
+    }
+    
+    func bookIconForAlone(row:Int) ->NSURL {
+        
+        return NSURL(string: self.getAloneModel(row).bookimageurl!)!
+    }
+    
+    func bookNameForAlone(row:Int) ->String {
+        
+        return self.getAloneModel(row).bookname!
+    }
+    
+    func bookWriterForAlone(row:Int) ->String {
+        
+        return self.getAloneModel(row).bookauthor!
+        
+    }
+    
 //MARK: 底部视图
-    
-    
-    
     
     var bottomNum : Int {
         
@@ -213,4 +275,21 @@ class BookShopViewModel: BaseViewModel {
             return (self.bottomArr?.count)!
         }
     }
+    
+    private func getBottomModel(row:Int) ->AgospecialModel {
+        
+        
+        let model = AgospecialModel()
+        
+        model.mj_setKeyValues(self.bottomArr![row])
+        
+        return model
+    }
+    
+    func bottomIconForBottom(row:Int) ->NSURL {
+        
+        return NSURL(string: self.getBottomModel(row).bookspecialcolumnthumbnailurl!)!
+        
+    }
+    
 }

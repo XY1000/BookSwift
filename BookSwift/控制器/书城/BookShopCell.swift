@@ -90,19 +90,25 @@ class BookShopCell: UITableViewCell,UICollectionViewDelegateFlowLayout,UICollect
             
         case .xinStyle:
             
-            myCell.bookNameLb.text = "asd23"
+            myCell.bookNameLb.text = self.bookShopVM?.bookNameForXin(indexPath.section)
+            myCell.bookIcon.sd_setImageWithURL(self.bookShopVM?.bookIconForXin(indexPath.section))
+            
+            myCell.bookWriterLb.text = self.bookShopVM?.bookWriterForXin(indexPath.section)
             
         case .hotStyle:
             
-            myCell.bookNameLb.text = "asd3"
+            myCell.bookNameLb.text = self.bookShopVM?.bookNameForHot(indexPath.section)
+            myCell.bookIcon.sd_setImageWithURL(self.bookShopVM?.bookIconForHot(indexPath.section))
+            myCell.bookWriterLb.text = self.bookShopVM?.bookWriterForHot(indexPath.section)
             
         case .duStyle:
             
-            myCell.bookNameLb.text = "asd4"
+            myCell.bookNameLb.text = self.bookShopVM?.bookNameForAlone(indexPath.section)
+            myCell.bookIcon.sd_setImageWithURL(self.bookShopVM?.bookIconForAlone(indexPath.section))
             
-        default:
+            myCell.bookWriterLb.text = self.bookShopVM?.bookWriterForAlone(indexPath.section)
             
-            break
+        
         }
         
         
@@ -123,13 +129,7 @@ class BookShopCell: UITableViewCell,UICollectionViewDelegateFlowLayout,UICollect
 
     func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAtIndex section: Int) -> UIEdgeInsets {
         
-        return UIEdgeInsetsMake(5, 5, 5, 5)
-        
-    }
-    
-    func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAtIndex section: Int) -> CGFloat {
-     
-        return 15
+        return UIEdgeInsetsMake(0, 5, 0, 5)
         
     }
     
@@ -150,7 +150,7 @@ class BookShopCell: UITableViewCell,UICollectionViewDelegateFlowLayout,UICollect
         // Configure the view for the selected state
     }
 
-    
+
     
     
 }
