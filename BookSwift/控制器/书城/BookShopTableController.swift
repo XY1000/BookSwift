@@ -31,7 +31,6 @@ class BookShopTableController: UITableViewController {
         
         self.requestDataByNet()
         
-       
         
     }
    private func requestDataByNet() -> Void {

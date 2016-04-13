@@ -75,7 +75,7 @@ class NetManager: NSObject {
         
         let url  = (baseUrl as String) + "/BookReadPublished/bookInfo/selectSpecialBook"
         
-        let param:[String : AnyObject] = ["bookspecialcolumnid":"1"]
+        let param:[String : AnyObject] = ["bookspecialcolumnid":bookspecialcolumnid]
         
         Alamofire.request(.GET, url, parameters: param).responseJSON { (Response) -> Void in
             
@@ -106,6 +106,47 @@ class NetManager: NSObject {
         }
         
         
+        
+    }
+
+//MARK: 书籍详情
+    func getBookDetailData(pageFlg:String,bookid:String,userId:String,success:(Successback:BookDetailModel)-> Void,fail:(error:NSError)->Void) {
+        
+        let url = (baseUrl as String) + "/BookReadPublished/bookInfo/getBookInfoCommentList?pageFlg=1&bookid=1&userId=1"
+        
+       // let param : [String:String] = ["pageFlg":pageFlg,"bookid":bookid,"userId":userId]
+        
+        
+        Alamofire.request(.GET, url).responseJSON(completionHandler: { (Response) -> Void in
+            
+            switch Response.result {
+                
+            case .Success:
+                
+                if  Response.result.isSuccess {
+                    
+                    let model = BookDetailModel()
+                    
+                    model.mj_setKeyValues(Response.result.value)
+                    
+                    success(Successback:model)
+                    
+                }else {
+                    
+                    SVProgressHUD.showErrorWithStatus("isSuccess is false")
+                    
+                }
+                
+                
+                
+            case .Failure(let error):
+                
+                
+                fail(error: error)
+            }
+
+            
+        })
         
     }
     

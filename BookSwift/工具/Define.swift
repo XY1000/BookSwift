@@ -15,7 +15,7 @@ let SCREEN_HEIGHT = UIScreen.mainScreen().bounds.height
 
 class Define: NSObject {
     
-    //获取传入视图的控制器
+    //获取传入视图的控制器(必须保证有控制器，慎用)
    class func viewController(myView:UIView) ->UIViewController? {
         
         for var next = myView.superview!; true ; next = next.superview! {
@@ -29,7 +29,7 @@ class Define: NSObject {
             
             
         }
-        return nil
+    
         
     }
     
