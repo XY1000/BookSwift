@@ -10,6 +10,7 @@ import Foundation
 
 class BaseViewModel: NSObject {
 
-    
+    //是否正在进行网络请求
+    var isLoading : Bool = true
     
 }

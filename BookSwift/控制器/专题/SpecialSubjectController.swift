@@ -9,17 +9,40 @@
 import UIKit
 
 class SpecialSubjectController: UITableViewController {
-        
+    
+    
+    private let CellId = "SpecialCell"
+    
+    @IBOutlet weak var headerImgV: UIImageView!
+    
+    var bookspecialcolumnid:String!
+    
+    var specialVM : SpecialViewModel = SpecialViewModel()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+    
+        self.requestDataByNet()
     }
 
+    func requestDataByNet() {
+        
+        self.specialVM.getSpecialSubjectDataByViewModelWith(self.bookspecialcolumnid, success: { (isSuccess) -> Void in
+            
+            self.tableView.reloadData()
+            
+            
+            }) { (error) -> Void in
+                
+                
+                
+                SVProgressHUD.showErrorWithStatus(error.localizedDescription)
+                
+        }
+        
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -28,25 +51,35 @@ class SpecialSubjectController: UITableViewController {
     // MARK: - Table view data source
 
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
+        
+        return 1
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 0
+        
+        return self.specialVM.specialSubjectNum
     }
 
-    /*
+    
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath)
-
-        // Configure the cell...
+        let cell = tableView.dequeueReusableCellWithIdentifier(CellId, forIndexPath: indexPath)
 
         return cell
     }
-    */
+    
 
+    override func tableView(tableView: UITableView, willDisplayCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
+        
+        
+        let myCell:SpecialTableCell = cell as! SpecialTableCell
+        
+        myCell.model = self.specialVM.getSpecialModel(indexPath.row)
+        
+        
+        
+    }
+    
+    
     /*
     // Override to support conditional editing of the table view.
     override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {

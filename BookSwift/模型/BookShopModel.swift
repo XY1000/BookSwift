@@ -24,14 +24,7 @@ class BookShopModel: NSObject {
 
     var newSpecialColumn: [NSDictionary]?
     
-//     func mj_objectClassInArray() -> [NSObject : AnyObject]! {
-//        
-//        return ["agoSpecialColumn":AgospecialModel(),"tailoredBook":TailoredbookModel(),
-//                "hotBook":HotbookModel(),"newGoodBook":NewgoodbookModel(),
-//                "aloneBook":AlonebookModel(),"newSpecialColumn":NewspecialModel()
-//        ]
-//        
-//    }
+
     
 }
 class AlonebookModel: NSObject {

@@ -31,7 +31,7 @@ class BookShopTableController: UITableViewController {
         
         self.requestDataByNet()
         
-        self.tableView.tableFooterView?.bounds = CGRectMake(0, 0,(self.tableView.tableFooterView?.bounds.size.width)!, 250)
+       
         
     }
    private func requestDataByNet() -> Void {
@@ -113,7 +113,13 @@ class BookShopTableController: UITableViewController {
     
     func headerViewDidSelected(sender:UIButton)->Void {
         
-        print("图片的id \(sender.tag - 1000)")
+        let story = UIStoryboard(name: "SpecialSubject", bundle: nil)
+        
+        let vc : SpecialSubjectController = story.instantiateInitialViewController() as! SpecialSubjectController
+        
+        vc.bookspecialcolumnid = String(sender.tag - 1000)
+        
+        self.navigationController?.showViewController(vc, sender: self)
         
     }
 //MARK:UIScrollerViewDelegate
@@ -155,7 +161,7 @@ class BookShopTableController: UITableViewController {
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
     
-        return 1;
+        return 1
         
     }
     

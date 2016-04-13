@@ -16,9 +16,7 @@ class BookShopViewModel: BaseViewModel {
     private var hotArr: [NSDictionary]?
     private var xinArr: [NSDictionary]?
     private var liangArr: [NSDictionary]?
-    
-    //是否正在进行网络请求
-    var isLoading : Bool = true
+
     
     func getDataByNetComplete(success:(isSuccess:Bool)->Void,fail:(error:NSError)->Void)->Void {
         
@@ -289,6 +287,12 @@ class BookShopViewModel: BaseViewModel {
     func bottomIconForBottom(row:Int) ->NSURL {
         
         return NSURL(string: self.getBottomModel(row).bookspecialcolumnthumbnailurl!)!
+        
+    }
+    
+    func bottomIdForBottom(row:Int) ->Int {
+        
+        return self.getBottomModel(row).bookspecialcolumnid
         
     }
     

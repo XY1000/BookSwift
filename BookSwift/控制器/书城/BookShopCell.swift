@@ -123,7 +123,7 @@ class BookShopCell: UITableViewCell,UICollectionViewDelegateFlowLayout,UICollect
         
         let width  = (SCREEN_WIDTH - 3 * 15 - 5 ) / 3.5
         
-        return CGSizeMake(width, width * 2)
+        return CGSizeMake(width, width * 2.2)
         
     }
 

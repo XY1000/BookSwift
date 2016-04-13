@@ -76,6 +76,32 @@ class BottomCell: UITableViewCell,UICollectionViewDataSource,UICollectionViewDel
     
     func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
         
+        let story = UIStoryboard(name: "SpecialSubject", bundle: nil)
+        
+        let vc : SpecialSubjectController = story.instantiateInitialViewController() as! SpecialSubjectController
+        
+        var row : Int = 0
+        
+        switch indexPath.row {
+            
+        case 0:
+            
+            row = 2 * indexPath.section
+            
+        case 1:
+            
+            row = 2 * indexPath.section + 1
+        default:
+            
+            return
+        }
+        
+        vc.bookspecialcolumnid = String(self.viewModel!.bottomIdForBottom(row))
+        
+        let parVC:UIViewController = Define.viewController(self)!
+        
+        parVC.navigationController?.showViewController(vc, sender: parVC)
+         
     }
     
     

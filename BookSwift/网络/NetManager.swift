@@ -34,7 +34,7 @@ class NetManager: NSObject {
     }
     
 //MARK:书架
-    func getBookShopData(success:(Successback:BookShopModel)-> Void,fail:(error:NSError)->Void)->Void {
+    func getBookShopData(success:(Successback:BookShopModel)-> Void,fail:(error:NSError)->Void) {
         
         
         let url = (baseUrl as String) + "/BookReadPublished/bookInfo/getBookCity"
@@ -70,6 +70,43 @@ class NetManager: NSObject {
         
     }
     
-    
+//MARK: 专题
+    func getSpecialSubjectDataWithId(bookspecialcolumnid:String,success:(Successback:[AnyObject])-> Void,fail:(error:NSError)->Void) {
+        
+        let url  = (baseUrl as String) + "/BookReadPublished/bookInfo/selectSpecialBook"
+        
+        let param:[String : AnyObject] = ["bookspecialcolumnid":"1"]
+        
+        Alamofire.request(.GET, url, parameters: param).responseJSON { (Response) -> Void in
+            
+            switch Response.result {
+                
+            case .Success:
+                
+                if  Response.result.isSuccess {
+        
+                    success(Successback:Response.result.value == nil ? []:Response.result.value! as! [AnyObject])
+                    
+                }else {
+                    
+                    SVProgressHUD.showErrorWithStatus("isSuccess is false")
+                    
+                }
+                
+                
+                
+            case .Failure(let error):
+                
+            
+                fail(error: error)
+            }
+            
+
+            
+        }
+        
+        
+        
+    }
     
 }
