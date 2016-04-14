@@ -1,14 +1,14 @@
 //
-//  CommentCell.swift
+//  LookMoreCell.swift
 //  BookSwift
 //
-//  Created by tmp on 16/4/13.
+//  Created by tmp on 16/4/14.
 //  Copyright © 2016年 hxy. All rights reserved.
 //
 
 import UIKit
 
-class CommentCell: UITableViewCell {
+class LookMoreCell: UITableViewCell {
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -20,5 +20,5 @@ class CommentCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
-
+    
 }

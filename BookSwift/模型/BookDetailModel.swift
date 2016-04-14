@@ -47,7 +47,8 @@ class BookcommentlistModel: NSObject {
     var userId: String?
 
     var bookchaperid: Int = 0
-
+    
+    var countCommentPraise: Int = 0
 }
 
 class CommentReplylistModel: NSObject {

@@ -116,6 +116,15 @@ class BookShopCell: UITableViewCell,UICollectionViewDelegateFlowLayout,UICollect
     
     func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
         
+        
+        let story = UIStoryboard(name: "BookDetail", bundle: nil)
+        
+        let vc = story.instantiateInitialViewController()
+        
+        let parentVC = Define.viewController(collectionView)
+        
+        parentVC?.navigationController?.showViewController(vc!, sender: parentVC)
+        
     }
     
     

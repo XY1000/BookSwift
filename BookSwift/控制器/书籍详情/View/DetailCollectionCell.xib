@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="DetailCollectionCell" id="gTV-IL-0wX" customClass="DetailCollectionCell" customModule="BookSwift" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="196" height="223"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="196" height="223"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" misplaced="YES" image="picture1.png" translatesAutoresizingMaskIntoConstraints="NO" id="vtN-Re-yle">
+                        <rect key="frame" x="0.0" y="0.0" width="196" height="192"/>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MgT-Tq-XSM">
+                        <rect key="frame" x="77" y="202" width="42" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            </view>
+            <constraints>
+                <constraint firstItem="MgT-Tq-XSM" firstAttribute="top" secondItem="vtN-Re-yle" secondAttribute="bottom" constant="5" id="1gm-LQ-R5b"/>
+                <constraint firstItem="MgT-Tq-XSM" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="AZ4-IU-KC5"/>
+                <constraint firstAttribute="trailing" secondItem="vtN-Re-yle" secondAttribute="trailing" id="JQE-AL-53Q"/>
+                <constraint firstItem="vtN-Re-yle" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="RBa-pi-Vmf"/>
+                <constraint firstItem="vtN-Re-yle" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="TxJ-QA-JEw"/>
+                <constraint firstItem="vtN-Re-yle" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="jvk-SU-1xH"/>
+                <constraint firstAttribute="bottom" secondItem="MgT-Tq-XSM" secondAttribute="bottom" id="nbF-Ut-mS2"/>
+            </constraints>
+            <size key="customSize" width="196" height="223"/>
+            <connections>
+                <outlet property="bookIcon" destination="vtN-Re-yle" id="15n-5X-Vh7"/>
+                <outlet property="bookName" destination="MgT-Tq-XSM" id="fbK-1s-krb"/>
+            </connections>
+            <point key="canvasLocation" x="497" y="275.5"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="picture1.png" width="414" height="213"/>
+    </resources>
+</document>
