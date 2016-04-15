@@ -42,5 +42,8 @@ class SpecialSubjectModel: NSObject {
 
     var bookpreface: String?
 
+    //自己添加的给视图前面的线添加数据
+    var hidenLine:Bool = true
+    
 }
 

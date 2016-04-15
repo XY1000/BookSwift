@@ -10,7 +10,7 @@ import UIKit
 
 class SpecialSubjectController: UITableViewController {
     
-    
+    private var tmpRow:Int = 0
     private let CellId = "SpecialCell"
     
     @IBOutlet weak var headerImgV: UIImageView!
@@ -77,6 +77,8 @@ class SpecialSubjectController: UITableViewController {
         myCell.model = self.specialVM.getSpecialModel(indexPath.row)
         
         
+        print("row \(indexPath.row) line \(myCell.model.hidenLine) \n" )
+        
     }
     
     override func tableView(tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
@@ -104,5 +106,19 @@ class SpecialSubjectController: UITableViewController {
         return imagV
         
     }
-      
+    
+    
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        
+        self.specialVM.changeLineArr(self.tmpRow, value: true)
+    
+        self.specialVM.changeLineArr(indexPath.row, value: false)
+        
+        self.tmpRow = indexPath.row
+
+        
+        tableView.reloadData()
+    }
+    
+    
 }

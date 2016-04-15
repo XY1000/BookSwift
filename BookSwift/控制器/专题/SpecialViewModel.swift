@@ -11,6 +11,7 @@ import UIKit
 class SpecialViewModel: BaseViewModel {
 
     private var specialArr:[AnyObject]?
+    var lineArr:[Bool] = []
     
     func getSpecialSubjectDataByViewModelWith(bookspecialcolumnid:String,success:(isSuccess:Bool)->Void,fail:(error:NSError)->Void) {
         
@@ -19,6 +20,8 @@ class SpecialViewModel: BaseViewModel {
             self.isLoading = false
             
             self.specialArr = Successback
+            
+            self.configureLineArr()
             
             success(isSuccess: true)
             
@@ -52,12 +55,40 @@ class SpecialViewModel: BaseViewModel {
     
         model.mj_setKeyValues(self.specialArr![row])
         
+        model.hidenLine = self.lineArr[row]
+        
         return model
     
     }
     
     
+    //自己配置数据
+    func configureLineArr(){
+        
+        if self.specialArr != nil {
+            
+            
+            for var i = 0; i < self.specialArr!.count ; i++ {
+                
+                if i == 0{
+                
+                self.lineArr.append(false)
+                    
+                }else {
+                    
+                    self.lineArr.append(true)
+                }
+            }
+            
+        }
+        
+    }
     
+    func changeLineArr(index:Int, value:Bool) {
+        
+        self.lineArr[index] = value
+        
+    }
     
     
 }
