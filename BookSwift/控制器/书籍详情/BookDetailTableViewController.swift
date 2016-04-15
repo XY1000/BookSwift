@@ -45,6 +45,13 @@ class BookDetailTableViewController: UITableViewController {
     }
     //点击了图书
     @IBAction func tapIcon(sender: UITapGestureRecognizer) {
+        
+        let vc:LookBookViewController = UIStoryboard(name: "LookBook", bundle: nil).instantiateInitialViewController() as! LookBookViewController
+    
+        self.navigationController?.delegate = vc
+        
+        self.navigationController?.pushViewController(vc, animated: true)
+        
     }
   
     
@@ -121,7 +128,9 @@ class BookDetailTableViewController: UITableViewController {
         self.bookDesc.text = self.bookDetailVM.bookDescForHeader()
         self.configureReDuWith(self.bookDetailVM.bookRuDuForHeader())
     }
-        
+    
+  //MARK: 评论
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

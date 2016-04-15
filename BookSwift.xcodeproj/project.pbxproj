@@ -36,6 +36,8 @@
 		AE552C4C1CBF900D007919B1 /* DetailCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AE552C4A1CBF900D007919B1 /* DetailCollectionCell.xib */; };
 		AE9EC1A21CBCE6250037BF5E /* Define.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE9EC1A11CBCE6250037BF5E /* Define.swift */; };
 		AED003EF1CC0BDF300FE022E /* LookBookViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AED003EE1CC0BDF300FE022E /* LookBookViewController.swift */; };
+		AED004001CC0D2E000FE022E /* LookBook.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AED003FF1CC0D2E000FE022E /* LookBook.storyboard */; };
+		AED0040A1CC0E9A000FE022E /* TransitionAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = AED004091CC0E9A000FE022E /* TransitionAnimation.swift */; };
 		AEE03FC91CBDFBB900BBA416 /* SpecialSubjectController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEE03FC71CBDFBB900BBA416 /* SpecialSubjectController.swift */; };
 		AEE03FCC1CBDFC6900BBA416 /* SpecialSubject.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AEE03FCB1CBDFC6900BBA416 /* SpecialSubject.storyboard */; };
 		AEE0401A1CBE1B9400BBA416 /* SpecialTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEE040191CBE1B9400BBA416 /* SpecialTableCell.swift */; };
@@ -174,6 +176,8 @@
 		AE552C4A1CBF900D007919B1 /* DetailCollectionCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DetailCollectionCell.xib; sourceTree = "<group>"; };
 		AE9EC1A11CBCE6250037BF5E /* Define.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Define.swift; sourceTree = "<group>"; };
 		AED003EE1CC0BDF300FE022E /* LookBookViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LookBookViewController.swift; sourceTree = "<group>"; };
+		AED003FF1CC0D2E000FE022E /* LookBook.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LookBook.storyboard; sourceTree = "<group>"; };
+		AED004091CC0E9A000FE022E /* TransitionAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransitionAnimation.swift; sourceTree = "<group>"; };
 		AEE03FC71CBDFBB900BBA416 /* SpecialSubjectController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpecialSubjectController.swift; sourceTree = "<group>"; };
 		AEE03FCB1CBDFC6900BBA416 /* SpecialSubject.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SpecialSubject.storyboard; sourceTree = "<group>"; };
 		AEE040191CBE1B9400BBA416 /* SpecialTableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpecialTableCell.swift; sourceTree = "<group>"; };
@@ -306,6 +310,7 @@
 			isa = PBXGroup;
 			children = (
 				AED003EE1CC0BDF300FE022E /* LookBookViewController.swift */,
+				AED003FF1CC0D2E000FE022E /* LookBook.storyboard */,
 			);
 			path = "看书";
 			sourceTree = "<group>";
@@ -405,6 +410,7 @@
 			isa = PBXGroup;
 			children = (
 				AE9EC1A11CBCE6250037BF5E /* Define.swift */,
+				AED004091CC0E9A000FE022E /* TransitionAnimation.swift */,
 			);
 			path = "工具";
 			sourceTree = "<group>";
@@ -631,6 +637,7 @@
 				AEF5A9EB1CBB5DA000738242 /* Info.plist in Resources */,
 				AE300F2F1CBBB0FB00F47EE9 /* qidong2.png in Resources */,
 				AEE040361CBE44FC00BBA416 /* BookDetail.storyboard in Resources */,
+				AED004001CC0D2E000FE022E /* LookBook.storyboard in Resources */,
 				AEF5A9E41CBB543100738242 /* Assets.xcassets in Resources */,
 				AE0B4C7B1CBF3B5200E98F75 /* FirstCell.xib in Resources */,
 				AE300F311CBBB0FB00F47EE9 /* picture1.png in Resources */,
@@ -700,6 +707,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AED0040A1CC0E9A000FE022E /* TransitionAnimation.swift in Sources */,
 				AE300F1D1CBBAD9100F47EE9 /* NavigationController.swift in Sources */,
 				AE300F161CBBACDB00F47EE9 /* BookShopModel.swift in Sources */,
 				AED003EF1CC0BDF300FE022E /* LookBookViewController.swift in Sources */,
