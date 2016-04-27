@@ -112,7 +112,7 @@ class NetManager: NSObject {
 //MARK: 书籍详情
     func getBookDetailData(pageFlg:String,bookid:String,userId:String,success:(Successback:BookDetailModel)-> Void,fail:(error:NSError)->Void) {
         
-        let url = (baseUrl as String) + "/BookReadPublished/bookInfo/getBookInfoCommentList?pageFlg=1&bookid=1&userId=1"
+        let url = (baseUrl as String) + "/BookReadPublished/bookInfo/getBookInfoCommentList?pageFlg=1&bookId=1&userId=1"
         
        // let param : [String:String] = ["pageFlg":pageFlg,"bookid":bookid,"userId":userId]
         
